@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import GameOver from './components/GameOver';
 
-class MemoryGame extends Component {
+class GameOver extends Component {
     constructor(props) {
         super(props);
 
@@ -39,14 +38,19 @@ class MemoryGame extends Component {
     render() {
         return (
             <div>
-                <GameOver></GameOver>
+                 <div id="gameOver">
+        <div>
+            Parabéns, você completou o jogo!
+        </div>
+        <button id="restart">Jogue novamente</button>
+    </div>
             </div>
         );
     }
 }
 
-MemoryGame.propTypes = {
+GameOver.propTypes = {
 
 };
 
-export default MemoryGame;
+export default GameOver;
